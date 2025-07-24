@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Sample - Superstore.xlsx
+Query=`Orders$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Double" />
+            <Field name="Order ID" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Order Date" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Date" />
+            <Field name="Ship Date" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Date" />
+            <Field name="Ship Mode" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Customer ID" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Customer Name" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Segment" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Country" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="City" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="State" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Postal Code" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Region" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Product ID" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Sub-Category" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Product Name" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_WString" />
+            <Field name="Sales" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Double" />
+            <Field name="Quantity" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Double" />
+            <Field name="Discount" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Double" />
+            <Field name="Profit" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="174" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Category</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2025-07-24 13:23:03</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>Furniture</Operand>
+              <StartDate>2025-07-24 13:23:03</StartDate>
+              <EndDate>2025-07-24 13:23:03</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Category] = "Furniture"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="318" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>Category</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2025-07-24 13:28:47</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>Technology</Operand>
+              <StartDate>2025-07-24 13:28:47</StartDate>
+              <EndDate>2025-07-24 13:28:47</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Category] = "Technology"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="426" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\swetha.sri.a.kasturi\Desktop\Technology.xlsx|||Technology</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <MipTenantId />
+            <PreserveFormat>False</PreserveFormat>
+            <MipSensitivity />
+            <UNCLocal>False</UNCLocal>
+            <SkipFieldNames>False</SkipFieldNames>
+            <SuppressBlankFile>False</SuppressBlankFile>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Technology.xlsx
+Query=Technology</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="474" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\swetha.sri.a.kasturi\Desktop\Office Supplies.xlsx|||Office Supplies</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <MipTenantId />
+            <PreserveFormat>False</PreserveFormat>
+            <MipSensitivity />
+            <UNCLocal>False</UNCLocal>
+            <SkipFieldNames>False</SkipFieldNames>
+            <SuppressBlankFile>False</SuppressBlankFile>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Office Supplies.xlsx
+Query=Office Supplies</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="258" y="6" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\swetha.sri.a.kasturi\Desktop\Furniture.xlsx|||Furniture</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <MipTenantId />
+            <PreserveFormat>False</PreserveFormat>
+            <MipSensitivity />
+            <UNCLocal>False</UNCLocal>
+            <SkipFieldNames>False</SkipFieldNames>
+            <SuppressBlankFile>False</SuppressBlankFile>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Furniture.xlsx
+Query=Furniture</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="False" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="True" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="False" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Exercise 6</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="24ba5f48-00ae-4646-b5eb-90dbc9ed39ab" />
+      <Telemetry>
+        <PreviousWorkflowId value="01d34a41-6596-4f34-a08b-5f7e1c07ebcc" />
+        <OriginWorkflowId value="01d34a41-6596-4f34-a08b-5f7e1c07ebcc" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

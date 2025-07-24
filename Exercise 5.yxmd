@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="102" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Sample - Superstore.xlsx
+Query=`Orders$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Double" />
+            <Field name="Order ID" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Order Date" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Date" />
+            <Field name="Ship Date" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Date" />
+            <Field name="Ship Mode" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Customer ID" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Customer Name" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Segment" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Country" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="City" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="State" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Postal Code" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Region" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Product ID" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Category" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Sub-Category" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_String" />
+            <Field name="Product Name" size="255" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="V_WString" />
+            <Field name="Sales" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Double" />
+            <Field name="Quantity" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Double" />
+            <Field name="Discount" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Double" />
+            <Field name="Profit" source="File: C:\Users\swetha.sri.a.kasturi\Downloads\Sample - Superstore.xlsx|||`Orders$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="258" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Order ID" selected="True" />
+            <SelectField field="Customer ID" selected="True" />
+            <SelectField field="Sales" selected="True" />
+            <SelectField field="Quantity" selected="True" />
+            <SelectField field="Discount" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="378" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Sales] * [Quantity]" field="Total Amount" size="19.6" type="FixedDecimal" enabled="true" />
+            <FormulaField expression="[Discount] + 0.10" field="new_Discount" size="8" type="Double" enabled="true" />
+            <FormulaField expression="[Total Amount] * 1 - [new_Discount]&#xA;" field="Discounted Total" size="8" type="Double" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Total Amount = [Sales] * [Quantity]
+new_Discount = [Discount] + 0.10
+Discounted ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Exercise 5</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="14695f3c-5ab9-4e80-9c05-f66b2773a2f1" />
+      <Telemetry>
+        <PreviousWorkflowId value="a59c2f53-00f7-4c69-a0b6-fc61c927da29" />
+        <OriginWorkflowId value="a59c2f53-00f7-4c69-a0b6-fc61c927da29" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
